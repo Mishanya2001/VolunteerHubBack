@@ -40,7 +40,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         builder =>
         {
-            builder.WithOrigins("http://localhost:3000", "https://volunteershub.azurewebsites.net");
+            builder.WithOrigins("http://localhost:3000", "https://volunteer-hub.azurewebsites.net");
             builder.AllowCredentials();
         });
 });
