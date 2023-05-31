@@ -38,8 +38,8 @@ namespace Application.Queries.PostConnections
                 .Select(postConnection => new PostConnectionResponse(
                     postConnection.PostConnectionId,
                     userFromToken.UserId == postConnection.SenderId ?
-                        $"You have sent a message to {(userFromToken.Role == UserRole.Needful ? $"{postConnection.VolunteerPost.User.Name} {postConnection.VolunteerPost.User.Surname}" : $"{postConnection.NeedfulPost.User.Name} {postConnection.NeedfulPost.User.Surname}")}" :
-                        $"You have received a message from {(userFromToken.Role == UserRole.Needful ? $"{postConnection.VolunteerPost.User.Name} {postConnection.VolunteerPost.User.Surname}" : $"{postConnection.NeedfulPost.User.Name} {postConnection.NeedfulPost.User.Surname}")}",
+                        $"Ви відправили повідомлення до {(userFromToken.Role == UserRole.Needful ? $"{postConnection.VolunteerPost.User.Name} {postConnection.VolunteerPost.User.Surname}" : $"{postConnection.NeedfulPost.User.Name} {postConnection.NeedfulPost.User.Surname}")}" :
+                        $"Ви отримали повідомлення від {(userFromToken.Role == UserRole.Needful ? $"{postConnection.VolunteerPost.User.Name} {postConnection.VolunteerPost.User.Surname}" : $"{postConnection.NeedfulPost.User.Name} {postConnection.NeedfulPost.User.Surname}")}",
                     postConnection.Title,
                     postConnection.Message,
                     postConnection.VolunteerPost,

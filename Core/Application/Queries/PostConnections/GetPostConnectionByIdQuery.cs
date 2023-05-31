@@ -40,10 +40,10 @@ namespace Application.Queries.PostConnections
                 return new PostConnectionResponse(
                     postConnection.PostConnectionId,
                     userFromToken.Role == UserRole.Admin ?
-                        "Notification" :
+                        "Сповіщення" :
                         userFromToken.UserId == postConnection.SenderId ?
-                            "You have sent a message" :
-                            "You have received a message",
+                            "Ви відправили повідомлення" :
+                            "Ви отримали повідомлення",
                     postConnection.Title,
                     postConnection.Message,
                     postConnection.VolunteerPost,
